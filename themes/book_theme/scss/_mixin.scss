@@ -1,0 +1,32 @@
+@use 'variable' as var;
+
+$breakpoint: (
+  sp: 'screen and (max-width: 768px)',
+  tab: 'screen and (max-width: 1024px)',
+  tab2: 'screen and (min-width: 1024px)',
+  pc: 'screen and (max-width: 1279px)',
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+    @content;
+  }
+}
+
+@mixin container {
+  width: calc(#{var.$container-pc} / #{var.$base-pc} * 100%);
+  max-width: #{var.$container-pc}px;
+  margin: 0 auto;
+  @include mq(pc) {
+    width: calc(#{var.$container-pc2} / #{var.$base-pc2} * 100%);
+    max-width: #{var.$container-pc2}px;
+  }
+  @include mq(tab) {
+    width: calc(#{var.$container-tab} / #{var.$base-tab} * 100%);
+    max-width: #{var.$container-tab}px;
+  }
+  @include mq(sp) {
+    width: calc(#{var.$container-sp} / #{var.$base-sp} * 100%);
+    // max-width: #{var.$container-sp}px;
+  }
+}
