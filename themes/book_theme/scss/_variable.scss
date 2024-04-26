@@ -1,0 +1,44 @@
+/*use colors*/
+$main-color: #000;
+$sub-color: #000;
+$bk-color: #000;
+$wh-color: #fff;
+$Gr-color: #ccc;
+
+/*gradation*/
+
+/*sizePC(1280px~MAX)*/
+$base-pc: 1366;
+$container-pc: 1260;
+//左右寄せコンテンツ
+$container-l-pc: 1235;
+
+/*sizePC2(1024px~1280)*/
+$base-pc2: 1100;
+$container-pc2: 1024;
+//左右寄せコンテンツ
+$container-l-pc2: 1235;
+
+/*sizeTablet(601px~1023)*/
+$base-tab: 867;
+$container-tab: 787;
+//左右寄せコンテンツ
+$container-l-tab: 1235;
+
+/*sizeSP(MIN~768)*/
+$base-sp: 425;
+$container-sp: 375;
+//左右寄せコンテンツ
+$container-l-sp: 1235;
+
+//ヘッダー
+$header-base: 1366;
+$header-container: 1260;
+
+//フッター
+$footer-base: 1366;
+$footer-container: 1260;
+
+/*font family*/
+$NotoSansJP:'Noto Sans JP', sans-serif;
+$Robot:'Roboto', sans-serif;

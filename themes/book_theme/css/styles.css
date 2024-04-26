@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/*共通scss*/
+/*use colors*/
+/*gradation*/
+/*sizePC(1280px~MAX)*/
+/*sizePC2(1024px~1280)*/
+/*sizeTablet(601px~1023)*/
+/*sizeSP(MIN~768)*/
+/*font family*/
+/*共通scss*/
+/*共通scss*/
+/*common style*/
+/*body*/
+body {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Noto Sans JP", sans-serif;
+}
+@media screen and (max-width: 1279px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/*main*/
+main {
+  width: 100%;
+  position: relative;
+}
+
+/*tab以下*/
+.tab-only {
+  display: none;
+}
+@media screen and (max-width: 1279px) {
+  .tab-only {
+    display: block;
+  }
+}
+
+/*sp以下*/
+.sp-only {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .sp-only {
+    display: block;
+  }
+}
+
+/*PCのみホバーアニメーション*/
+@media screen and (min-width: 1024px) {
+  a {
+    transition: 0.25s ease-in-out;
+    opacity: 1;
+  }
+  a:hover {
+    transition: 0.25s ease-in-out;
+    opacity: 0.6;
+  }
+}
+/*container*/
+.container {
+  width: calc(1260 / 1366 * 100%);
+  max-width: 1260px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1279px) {
+  .container {
+    width: calc(1024 / 1100 * 100%);
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: calc(787 / 867 * 100%);
+    max-width: 787px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: calc(375 / 425 * 100%);
+  }
+}
+
+/*共通scss*/
+/*contact form 7*/
+/*three*/
+/*load*/
+/*scss page*/
+/*single layout*//*# sourceMappingURL=styles.css.map */
