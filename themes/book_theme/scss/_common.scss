@@ -1,0 +1,56 @@
+@use 'variable' as var;
+@use 'mixin' as mixin;
+
+/*common style*/
+/*body*/
+body {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var.$NotoSansJP;
+
+    @include mixin.mq(pc) {
+        font-size: 14px;
+    }
+}
+
+/*main*/
+main {
+    width: 100%;
+    position: relative;
+}
+
+/*tab以下*/
+.tab-only{
+    display: none;
+    @include mixin.mq(pc){
+        display: block;
+    }
+}
+
+/*sp以下*/
+.sp-only{
+    display: none;
+    @include mixin.mq(sp){
+        display: block;
+    }
+}
+
+/*PCのみホバーアニメーション*/
+@include mixin.mq(tab2) {
+    a {
+        transition: 0.25s ease-in-out;
+        opacity: 1;
+
+        &:hover {
+            transition: 0.25s ease-in-out;
+            opacity: 0.6;
+        }
+    }
+}
+
+/*container*/
+.container {
+    @include mixin.container();
+}
+
